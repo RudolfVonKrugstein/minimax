@@ -1,0 +1,2 @@
+Generic implementation of minimax with alpha beta prunning.
+Connect 4 serves as an example.
