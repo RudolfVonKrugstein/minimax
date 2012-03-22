@@ -45,7 +45,7 @@ alphaBeta n = alphaBeta' (negate ws) (ws) n
     ws = winscore (pos n)
     alphaBeta' :: Position a => Int -> Int -> GameTree a -> Int
     alphaBeta' _     _    (Node _ pos [])       = score pos
-    alphaBeta' alpha beta n@(Node _ _ children) = fst $ foldl' sub (alpha, beta) children
+    alphaBeta' alpha beta (Node _ _ children) = fst $ foldl' sub (alpha, beta) children
       where
         sub :: Position a => (Int,Int) -> GameTree a -> (Int, Int)
         sub (alpha,beta) n
