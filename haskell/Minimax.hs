@@ -52,4 +52,3 @@ alphaBeta n = alphaBeta' (negate ws) (ws) n
           | alpha >= beta = (alpha, beta)
           | otherwise     = (max alpha $ negate $ alphaBeta' (negate beta) (negate alpha) n, beta)
 
-main = undefined
